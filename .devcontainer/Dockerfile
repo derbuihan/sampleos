@@ -57,6 +57,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
         llvm \
         cpio \
         qemu-system \
+        nasm \
     && apt-get clean
 
 # Download source code
