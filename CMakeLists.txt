@@ -7,7 +7,10 @@ set(CMAKE_ASM_COMPILER nasm)
 
 add_custom_command(
         OUTPUT boot.bin
-        COMMAND ${CMAKE_ASM_COMPILER} -o boot.bin ${CMAKE_SOURCE_DIR}/src/boot.asm
+        COMMAND ${CMAKE_ASM_COMPILER} -f bin -o boot.bin ${CMAKE_SOURCE_DIR}/src/boot.asm
+        COMMAND dd if=${CMAKE_SOURCE_DIR}/src/message.txt >> ./boot.bin
+        COMMAND dd if=/dev/zero bs=512 count=1 >> ./boot.bin
+        COMMAND uname -a
         DEPENDS ${CMAKE_SOURCE_DIR}/src/boot.asm
 )
 
