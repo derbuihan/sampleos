@@ -10,17 +10,28 @@ times 33 db 0
 start:
     jmp 0x7c0:step2
 
+; Interrupt handler
+handle_zero:
+    mov ah, 0eh
+    mov al, 'A'
+    int 10h
+    iret
+
 step2:
     cli; Disable interrupts
     ; Set data segment to 0x7c0
     mov ax, 0x7c0
     mov ds, ax
-
     ; Set stack segment to 0x0000
     mov ax, 0x00
     mov ss, ax
     mov sp, 0x7c00 ; Set stack pointer to 0x7c0
     sti; Enable interrupts
+
+    ; interrupt vector table
+    mov word[ss:0x00], handle_zero
+    mov word[ss:0x02], 0x7c0
+    int 0 ; Trigger interrupt
 
     mov si, message
     call print
