@@ -16,6 +16,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # Install dependencies
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
+    && apt-get -y upgrade \
     && apt-get -y install \
         build-essential \
         gcc \
@@ -63,9 +64,9 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
 # Download source code
 RUN mkdir ~/src \
     && cd ~/src \
-    && wget https://ftp.gnu.org/gnu/binutils/binutils-2.43.tar.gz \
-    && tar -xvf binutils-2.43.tar.gz \
-    && wget https://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-14.2.0/gcc-14.2.0.tar.gz \
+    && wget https://ftp.gnu.org/gnu/binutils/binutils-2.43.1.tar.gz \
+    && tar -xvf binutils-2.43.1.tar.gz \
+    && wget https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.gz \
     && tar -xvf gcc-14.2.0.tar.gz
 
 # Set up environment variables \
@@ -77,7 +78,7 @@ ENV PATH="/opt/cross/bin:$PATH" \
 RUN cd ~/src \
     && mkdir build-binutils \
     && cd build-binutils \
-    && ../binutils-2.43/configure --target="$TARGET" --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror \
+    && ../binutils-2.43.1/configure --target="$TARGET" --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror \
     && make \
     && make install
 
