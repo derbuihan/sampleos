@@ -5,4 +5,4 @@
 
 void *memset(void *ptr, int c, size_t size);
 
-#endif //SAMPLEOS_MEMORY_H
+#endif  // SAMPLEOS_MEMORY_H

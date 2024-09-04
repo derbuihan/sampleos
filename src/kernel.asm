@@ -23,6 +23,9 @@ _start:
 
     call kernel_main
 
+    mov ax, 0
+    div ax
+
     jmp $
 
 times 512 - ($ - $$) db 0
