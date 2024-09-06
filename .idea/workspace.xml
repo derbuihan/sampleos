@@ -19,18 +19,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="fix Makefile">
-      <change afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/idt/idt.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/idt/idt.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented IDT">
+      <change afterPath="$PROJECT_DIR$/src/io/io.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/idt/idt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/idt/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725467911783</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented IDT">
+      <option name="closed" value="true" />
+      <created>1725470717734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725470717734</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +191,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="print function" />
     <MESSAGE value="fix Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Makefile" />
+    <MESSAGE value="Implemented IDT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented IDT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
