@@ -19,12 +19,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented kmalloc/kfree">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Creating enable interrupts functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/idt/idt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/idt/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/heap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/heap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/heap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/kheap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/kheap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/kheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/kheap.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +100,8 @@
   &quot;keyToString&quot;: {
     &quot;Makefile Target.all.executor&quot;: &quot;Run&quot;,
     &quot;Makefile Target.clean.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile のターゲット.all.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile のターゲット.clean.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
@@ -137,9 +139,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Makefile のターゲット.clean" />
       <item itemvalue="ネイティブアプリケーション.all" />
+      <item itemvalue="Makefile のターゲット.clean" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile のターゲット.clean" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,7 +160,9 @@
       <workItem from="1725206799472" duration="6462000" />
       <workItem from="1725639644507" duration="4736000" />
       <workItem from="1725690366880" duration="79000" />
-      <workItem from="1725690450130" duration="2478000" />
+      <workItem from="1725690450130" duration="5120000" />
+      <workItem from="1725696268546" duration="6000" />
+      <workItem from="1725696333820" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -195,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725692752935</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creating enable interrupts functionality">
+      <option name="closed" value="true" />
+      <created>1725692999967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725692999968</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +224,8 @@
     <MESSAGE value="Implemented IDT" />
     <MESSAGE value="Implemented PIC" />
     <MESSAGE value="Implemented kmalloc/kfree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented kmalloc/kfree" />
+    <MESSAGE value="Creating enable interrupts functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating enable interrupts functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

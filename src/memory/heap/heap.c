@@ -3,7 +3,6 @@
 #include <stdbool.h>
 
 #include "../../config.h"
-#include "../../kernel.h"
 #include "../../status.h"
 #include "../memory.h"
 
