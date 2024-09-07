@@ -19,13 +19,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented PIC">
-      <change afterPath="$PROJECT_DIR$/src/memory/heap/heap.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memory/heap/heap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memory/heap/kheap.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memory/heap/kheap.h" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented kmalloc/kfree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/idt/idt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/idt/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +153,7 @@
       <workItem from="1725206799472" duration="6462000" />
       <workItem from="1725639644507" duration="4736000" />
       <workItem from="1725690366880" duration="79000" />
-      <workItem from="1725690450130" duration="2181000" />
+      <workItem from="1725690450130" duration="2478000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -189,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725620160381</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented kmalloc/kfree">
+      <option name="closed" value="true" />
+      <created>1725692752935</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725692752935</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +206,8 @@
     <MESSAGE value="fix Makefile" />
     <MESSAGE value="Implemented IDT" />
     <MESSAGE value="Implemented PIC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented PIC" />
+    <MESSAGE value="Implemented kmalloc/kfree" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented kmalloc/kfree" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
