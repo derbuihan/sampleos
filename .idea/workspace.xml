@@ -19,11 +19,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="implemented paging">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented ability to change the page tables">
+      <change afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="12921000" />
+      <workItem from="1725696333820" duration="20023000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -227,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725771285765</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented ability to change the page tables">
+      <option name="closed" value="true" />
+      <created>1725776459155</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725776459155</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +251,8 @@
     <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
     <MESSAGE value="implemented paging" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented paging" />
+    <MESSAGE value="Implemented ability to change the page tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented ability to change the page tables" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
