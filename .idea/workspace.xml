@@ -19,15 +19,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="implemented kzalloc">
-      <change afterPath="$PROJECT_DIR$/src/memory/paging/paging.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memory/paging/paging.h" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="implemented paging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/idt/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/io.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/io.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/heap/kheap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/kheap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +161,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="8556000" />
+      <workItem from="1725696333820" duration="12921000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -223,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725696525242</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implemented paging">
+      <option name="closed" value="true" />
+      <created>1725771285765</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725771285765</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,18 +241,8 @@
     <MESSAGE value="Implemented kmalloc/kfree" />
     <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented kzalloc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/memory/paging/paging.c</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="implemented paging" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented paging" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

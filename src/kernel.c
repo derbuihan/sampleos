@@ -62,7 +62,7 @@ static struct paging_4gb_chunk *kernel_chunk = 0;
 
 void kernel_main() {
   terminal_initialize();
-  print("Hello, World!\n");
+  print("Hello, SampleOS!\n");
 
   // Initialize the heap
   kheap_init();
@@ -77,16 +77,23 @@ void kernel_main() {
   // Switch to kernel paging chunk
   paging_switch(paging_4gb_chunk_get_directory(kernel_chunk));
 
+  char *ptr = kzalloc(4096);
+  paging_set(paging_4gb_chunk_get_directory(kernel_chunk), (void *)0x1000,
+             (uint32_t)ptr | PAGING_ACCESS_FROM_ALL | PAGING_IS_WRITEABLE |
+                 PAGING_IS_PRESENT);
+
+  // Enable paging
+  enable_paging();
+
+  char *ptr2 = (char *)0x1000;
+  ptr2[0] = 'A';
+  ptr2[1] = 'B';
+  ptr2[2] = '\n';
+  ptr2[3] = '\0';
+
+  print(ptr);
+  print(ptr2);
+
   // Enable interrupts
   enable_interrupts();
-
-  void *ptr = kmalloc(50);
-  void *ptr2 = kmalloc(5000);
-  void *ptr3 = kmalloc(5600);
-
-  kfree(ptr);
-  void *ptr4 = kmalloc(50);
-
-  if (ptr || ptr2 || ptr3 || ptr4) {
-  }
 }
