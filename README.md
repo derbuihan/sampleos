@@ -12,19 +12,21 @@ It is written in C and Assembly and is based on the x86 architecture.
 - `i686-elf-binutils`
 - `i686-elf-gcc`
 
+# Build the OS
+
+```bash
+docker run --privileged --rm -it -v "$(pwd):/tmp/sampleos" -w /tmp/sampleos clion/ubuntu/cpp-env:1.0 /bin/bash -c "make clean; make all"
+```
+
 # Run the OS
 
 ```bash
-$ make clean
-$ make all
 $ qemu-system-x86_64 -hda bin/os.bin
 ```
 
 # Debug the OS
 
 ```bash
-$ make clean
-$ make all
 $ i386-elf-gdb
 (gdb) add-symbol-file ./build/kernelfull.o 0x100000
 (gdb) substitute-path /tmp/sampleos /path/to/sampleos # If you are using a different path

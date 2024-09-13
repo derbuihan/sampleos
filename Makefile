@@ -21,12 +21,20 @@ LD := i686-elf-ld
 
 all: $(BIN_DIR)/os.bin
 
-$(BIN_DIR)/os.bin: $(BIN_DIR)/boot.bin $(BIN_DIR)/kernel.bin
+$(BIN_DIR)/os.bin: $(BIN_DIR)/boot.bin $(BIN_DIR)/kernel.bin ./hello.txt
 	@mkdir -p $(@D)
 	rm -rf $(BIN_DIR)/os.bin
 	dd if=$(BIN_DIR)/boot.bin >> $(BIN_DIR)/os.bin
 	dd if=$(BIN_DIR)/kernel.bin >> $(BIN_DIR)/os.bin
-	dd if=/dev/zero bs=512 count=100 >> $(BIN_DIR)/os.bin
+	dd if=/dev/zero bs=1048576 count=16 >> $(BIN_DIR)/os.bin
+
+	# Mount the image
+	sudo mkdir -p /mnt/d
+	sudo mount -t vfat $(BIN_DIR)/os.bin /mnt/d
+
+	# Copy a file over
+	sudo cp ./hello.txt /mnt/d
+	sudo umount /mnt/d
 
 $(BIN_DIR)/boot.bin: $(SRC_DIR)/boot/boot.asm
 	@mkdir -p $(@D)

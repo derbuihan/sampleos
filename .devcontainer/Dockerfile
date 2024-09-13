@@ -4,15 +4,15 @@
 FROM ubuntu:latest
 
 ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+ARG UID=1000
+ARG GID=${UID}
 
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
-    && apt-get update \
+RUN apt-get update \
     && apt-get install -y sudo \
-    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-    && chmod 0440 /etc/sudoers.d/$USERNAME
+    && groupadd --gid ${GID} ${USERNAME} \
+    && useradd --uid ${UID} --gid ${GID} -m ${USERNAME} -s /bin/bash \
+    && echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} \
+    && chmod 0440 /etc/sudoers.d/${USERNAME}
 
 # Install dependencies
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
@@ -62,6 +62,8 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
     && apt-get clean
 
 # Download source code
+USER ${USERNAME}
+ENV HOME=/home/${USERNAME}
 RUN mkdir ~/src \
     && cd ~/src \
     && wget https://ftp.gnu.org/gnu/binutils/binutils-2.43.1.tar.gz \
@@ -70,26 +72,26 @@ RUN mkdir ~/src \
     && tar -xvf gcc-14.2.0.tar.gz
 
 # Set up environment variables \
-ENV PATH="/opt/cross/bin:$PATH" \
-    PREFIX="/opt/cross" \
-    TARGET="i686-elf"
+ENV PATH="/opt/cross/bin:${PATH}"
+ENV PREFIX="/opt/cross"
+ENV TARGET="i686-elf"
 
 # Compile binutils \
-RUN cd ~/src \
+RUN cd ${HOME}/src \
     && mkdir build-binutils \
     && cd build-binutils \
-    && ../binutils-2.43.1/configure --target="$TARGET" --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror \
+    && ../binutils-2.43.1/configure --target="${TARGET}" --prefix="${PREFIX}" --with-sysroot --disable-nls --disable-werror \
     && make \
-    && make install
+    && sudo make install
 
 # Compile GCC \
-RUN cd ~/src \
+RUN cd ${HOME}/src \
     && mkdir build-gcc \
     && cd build-gcc \
-    && ../gcc-14.2.0/configure --target="$TARGET" --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers \
+    && ../gcc-14.2.0/configure --target="${TARGET}" --prefix="${PREFIX}" --disable-nls --enable-languages=c,c++ --without-headers \
     && make all-gcc \
     && make all-target-libgcc \
-    && make install-gcc \
-    && make install-target-libgcc
+    && sudo make install-gcc \
+    && sudo make install-target-libgcc
 
-USER $USERNAME
+CMD [ "/bin/bash" ]
