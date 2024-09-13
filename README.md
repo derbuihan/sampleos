@@ -15,7 +15,8 @@ It is written in C and Assembly and is based on the x86 architecture.
 # Build the OS
 
 ```bash
-docker run --privileged --rm -it -v "$(pwd):/tmp/sampleos" -w /tmp/sampleos clion/ubuntu/cpp-env:1.0 /bin/bash -c "make clean; make all"
+$ docker build -f .devcontainer/Dockerfile -t clion/ubuntu/cpp-env:1.0 .
+$ docker run --privileged --rm -it -v "$(pwd):/tmp/sampleos" -w /tmp/sampleos clion/ubuntu/cpp-env:1.0 /bin/bash -c "make clean; make all"
 ```
 
 # Run the OS

@@ -19,13 +19,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented a disk streamer">
-      <change afterPath="$PROJECT_DIR$/hello.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.devcontainer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.devcontainer/Dockerfile" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented fat16 filesystem">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/all.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/run.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boot/boot.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/boot.asm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.Docker イメージ.executor": "Run",
+    "Docker.all.executor": "Run",
+    "Docker.build.executor": "Run",
     "Makefile Target.all.executor": "Run",
     "Makefile Target.clean.executor": "Run",
     "Makefile のターゲット.all.executor": "Run",
@@ -106,6 +108,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.run.executor": "Run",
+    "Shell Script.名前未設定.executor": "Run",
     "cf.advertisement.text.has.clang-format": "true",
     "cf.advertisement.text.overridden": "true",
     "cf.first.check.clang-format": "false",
@@ -127,32 +132,17 @@
       <recent name="$PROJECT_DIR$/src/memory" />
     </key>
   </component>
-  <component name="RunManager" selected="ネイティブアプリケーション.all">
+  <component name="RunManager" selected="Shell Script.run">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sampleos" TARGET_NAME="all" CONFIG_NAME="all" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="clean" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Makefile のターゲット.clean" />
-      <item itemvalue="ネイティブアプリケーション.all" />
+      <item itemvalue="Docker.all" />
+      <item itemvalue="Docker.build" />
+      <item itemvalue="Shell Script.run" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Makefile のターゲット.clean" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -168,7 +158,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="45382000" />
+      <workItem from="1725696333820" duration="47397000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -274,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726200109820</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implemented fat16 filesystem">
+      <option name="closed" value="true" />
+      <created>1726218287481</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726218287481</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +292,8 @@
     <MESSAGE value="add README.md" />
     <MESSAGE value="Making a path parser" />
     <MESSAGE value="Implemented a disk streamer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented a disk streamer" />
+    <MESSAGE value="Implemented fat16 filesystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented fat16 filesystem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
