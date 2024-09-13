@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 #include "disk/disk.h"
+#include "disk/streamer.h"
 #include "fs/pparser.h"
 #include "idt/idt.h"
 #include "io/io.h"
@@ -81,12 +82,10 @@ void kernel_main() {
   // Enable interrupts
   enable_interrupts();
 
-  struct path_root *root_path = pathparser_parse("0:/bin/shell.exe", NULL);
-  struct path_part *part = root_path->first;
-
-  while (part) {
-    print("/");
-    print(part->part);
-    part = part->next;
+  struct disk_streamer *stream = diskstreamer_new(0);
+  diskstreamer_seek(stream, 0x201);
+  char c = 0;
+  diskstreamer_read(stream, &c, 1);
+  while (1) {
   }
 }

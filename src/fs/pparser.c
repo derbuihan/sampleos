@@ -84,24 +84,16 @@ struct path_root* pathparser_parse(const char* path,
   const char* tmp_path = path;
   struct path_root* path_root = 0;
 
-  if (strlen(path) > SAMPLEOS_MAX_PATH) {
-    goto out;
-  }
+  if (strlen(path) > SAMPLEOS_MAX_PATH) goto out;
 
   res = pathparser_get_drive_by_path(&tmp_path);
-  if (res < 0) {
-    goto out;
-  }
+  if (res < 0) goto out;
 
   path_root = pathparser_create_root(res);
-  if (!path_root) {
-    goto out;
-  }
+  if (!path_root) goto out;
 
   struct path_part* first_part = pathparser_parse_path_part(NULL, &tmp_path);
-  if (!first_part) {
-    goto out;
-  }
+  if (!first_part) goto out;
 
   path_root->first = first_part;
   struct path_part* part = pathparser_parse_path_part(first_part, &tmp_path);
