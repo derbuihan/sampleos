@@ -19,12 +19,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implemented ability to change the page tables">
-      <change afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="add README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/status.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/status.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +163,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="20023000" />
+      <workItem from="1725696333820" duration="29228000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -236,7 +237,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725776459155</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Improving our disk driver">
+      <option name="closed" value="true" />
+      <created>1725813387750</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725813387750</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add README.md">
+      <option name="closed" value="true" />
+      <created>1726195985350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726195985350</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +269,9 @@
     <MESSAGE value="implemented kzalloc" />
     <MESSAGE value="implemented paging" />
     <MESSAGE value="Implemented ability to change the page tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ability to change the page tables" />
+    <MESSAGE value="Improving our disk driver" />
+    <MESSAGE value="add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
