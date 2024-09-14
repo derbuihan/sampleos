@@ -1,6 +1,8 @@
 #ifndef SAMPLEOS_DISK_H
 #define SAMPLEOS_DISK_H
 
+#include "../fs/file.h"
+
 typedef unsigned int SAMPLEOS_DISK_TYPE;
 
 // Represents a real physical hard disk
@@ -9,6 +11,9 @@ typedef unsigned int SAMPLEOS_DISK_TYPE;
 struct disk {
   SAMPLEOS_DISK_TYPE type;
   int sector_size;
+
+  // Filesystem (Setup by fs_resolve)
+  struct filesystem *filesystem;
 };
 
 void disk_search_and_init();
