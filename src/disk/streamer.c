@@ -3,25 +3,25 @@
 #include "../config.h"
 #include "../memory/heap/kheap.h"
 
-struct disk_streamer* diskstreamer_new(int disk_id) {
+struct disk_stream* diskstreamer_new(int disk_id) {
   struct disk* disk = disk_get(disk_id);
 
   if (!disk) {
     return 0;
   }
 
-  struct disk_streamer* stream = kzalloc(sizeof(struct disk_streamer));
+  struct disk_stream* stream = kzalloc(sizeof(struct disk_stream));
   stream->pos = 0;
   stream->disk = disk;
   return stream;
 }
 
-int diskstreamer_seek(struct disk_streamer* stream, int pos) {
+int diskstreamer_seek(struct disk_stream* stream, int pos) {
   stream->pos = pos;
   return 0;
 }
 
-int diskstreamer_read(struct disk_streamer* stream, void* out, int total) {
+int diskstreamer_read(struct disk_stream* stream, void* out, int total) {
   int sector = stream->pos / SAMPLEOS_SECTOR_SIZE;
   int offset = stream->pos % SAMPLEOS_SECTOR_SIZE;
   char buf[SAMPLEOS_SECTOR_SIZE];
@@ -45,4 +45,4 @@ out:
   return res;
 }
 
-void diskstreamer_close(struct disk_streamer* stream) { kfree(stream); }
+void diskstreamer_close(struct disk_stream* stream) { kfree(stream); }

@@ -19,15 +19,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Started implementing virtual filesystem functiojnality">
-      <change afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fs/fat/fat16.h" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing FAT16 filesystem driver core functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/disk.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/disk.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/streamer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/streamer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/streamer.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/streamer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/status.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/status.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/string/string.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/string/string.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +161,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="59950000" />
+      <workItem from="1725696333820" duration="73771000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -291,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726292419828</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Implementing FAT16 filesystem driver core functionality">
+      <option name="closed" value="true" />
+      <created>1726372670718</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726372670718</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +322,8 @@
     <MESSAGE value="Implemented fat16 filesystem" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="Started implementing virtual filesystem functiojnality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started implementing virtual filesystem functiojnality" />
+    <MESSAGE value="Implementing FAT16 filesystem driver core functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing FAT16 filesystem driver core functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
