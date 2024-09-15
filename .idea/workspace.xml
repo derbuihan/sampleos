@@ -19,13 +19,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="update README.md">
-      <change afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fs/file.h" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Started implementing virtual filesystem functiojnality">
+      <change afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fs/fat/fat16.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/disk/disk.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/disk/disk.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/string.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/string.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="56514000" />
+      <workItem from="1725696333820" duration="59950000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -281,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726220355286</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Started implementing virtual filesystem functiojnality">
+      <option name="closed" value="true" />
+      <created>1726292419828</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726292419828</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +313,8 @@
     <MESSAGE value="Implemented a disk streamer" />
     <MESSAGE value="Implemented fat16 filesystem" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="Started implementing virtual filesystem functiojnality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started implementing virtual filesystem functiojnality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

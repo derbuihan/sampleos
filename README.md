@@ -12,20 +12,20 @@ It is written in C and Assembly and is based on the x86 architecture.
 - `i686-elf-binutils`
 - `i686-elf-gcc`
 
-# Build the OS
+# Build
 
 ```bash
 $ docker build -f .devcontainer/Dockerfile -t clion/ubuntu/cpp-env:1.0 .
 $ docker run --privileged --rm -it -v "$(pwd):/tmp/sampleos" -w /tmp/sampleos clion/ubuntu/cpp-env:1.0 /bin/bash -c "make clean; make all"
 ```
 
-# Run the OS
+# Run
 
 ```bash
 $ qemu-system-x86_64 -hda bin/os.bin
 ```
 
-# Debug the OS
+# Debug
 
 ```bash
 $ i386-elf-gdb

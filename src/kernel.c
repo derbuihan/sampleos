@@ -63,6 +63,9 @@ void kernel_main() {
   // Initialize the heap
   kheap_init();
 
+  // Initialize filesystems
+  fs_init();
+
   // Search and initialize the disk
   disk_search_and_init();
 
@@ -82,10 +85,9 @@ void kernel_main() {
   // Enable interrupts
   enable_interrupts();
 
-  struct disk_streamer *stream = diskstreamer_new(0);
-  diskstreamer_seek(stream, 0x201);
-  char c = 0;
-  diskstreamer_read(stream, &c, 1);
+  char buf[20];
+  strcpy(buf, "Hello!");
+
   while (1) {
   }
 }
