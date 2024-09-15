@@ -12,8 +12,14 @@ struct disk {
   SAMPLEOS_DISK_TYPE type;
   int sector_size;
 
+  // The id of the disk
+  int id;
+
   // Filesystem (Setup by fs_resolve)
   struct filesystem *filesystem;
+
+  // The private
+  void *fs_private;
 };
 
 void disk_search_and_init();
