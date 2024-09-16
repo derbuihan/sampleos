@@ -28,7 +28,7 @@ int strnlen(const char *ptr, int max) {
 int strnlen_terminator(const char *ptr, int max, char terminator) {
   int i = 0;
   for (i = 0; i < max; i++) {
-    if (ptr[i] == 0 || ptr[i] == terminator) break;
+    if (ptr[i] == '\0' || ptr[i] == terminator) break;
   }
   return i;
 }
@@ -59,8 +59,8 @@ char *strcpy(char *dest, const char *src) {
   char *res = dest;
   while (*src != 0) {
     *dest = *src;
-    dest += 1;
     src += 1;
+    dest += 1;
   }
   *dest = 0x00;
   return res;
