@@ -148,5 +148,7 @@ int fopen(const char* filename, const char* mode_str) {
   res = desc->index;
 
 out:
+  // fopen should not return negative values
+  if (res < 0) res = 0;
   return res;
 }

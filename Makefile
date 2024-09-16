@@ -33,9 +33,7 @@ $(BIN_DIR)/os.bin: $(BIN_DIR)/boot.bin $(BIN_DIR)/kernel.bin ./hello.txt
 	sudo mount -t vfat $(BIN_DIR)/os.bin /mnt/d
 
 	# Copy a file over
-	sudo cp ./hello.txt /mnt/d/hello.txt
-	sudo cp ./hello.txt /mnt/d/hello2.txt
-	sudo cp ./hello.txt /mnt/d/hello3.txt
+	sudo cp ./hello.txt /mnt/d
 	sudo umount /mnt/d
 
 $(BIN_DIR)/boot.bin: $(SRC_DIR)/boot/boot.asm
