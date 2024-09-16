@@ -17,6 +17,8 @@ typedef void* (*FS_OPEN_FUNCTION)(struct disk* disk, struct path_part* path,
 typedef int (*FS_READ_FUNCTION)(struct disk* disk, void* private, uint32_t size,
                                 uint32_t nmemb, char* out);
 typedef int (*FS_RESOLVE_FUNCTION)(struct disk* disk);
+typedef int (*FS_SEEK_FUNCTION)(void* private, int offset,
+                                FILE_SEEK_MODE seek_mode);
 
 struct filesystem {
   // Filesystem should return zero from resolve if the provided disk is using
@@ -24,6 +26,7 @@ struct filesystem {
   FS_RESOLVE_FUNCTION resolve;
   FS_OPEN_FUNCTION open;
   FS_READ_FUNCTION read;
+  FS_SEEK_FUNCTION seek;
 
   char name[20];
 };
@@ -42,7 +45,9 @@ struct file_descriptor {
 
 void fs_init();
 int fopen(const char* filename, const char* mode_str);
+int fseek(int fd, int offset, FILE_SEEK_MODE whence);
 int fread(void* ptr, uint32_t size, uint32_t nmemb, int fd);
+
 void fs_insert_filesystem(struct filesystem* fs);
 struct filesystem* fs_resolve(struct disk* disk);
 
