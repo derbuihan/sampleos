@@ -19,16 +19,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing the VFS fopen function">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing FAT16 fopen function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/file.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/memory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/status.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/status.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/string/string.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +158,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="97640000" />
+      <workItem from="1725696333820" duration="99224000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -316,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726475639408</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implementing FAT16 fopen function">
+      <option name="closed" value="true" />
+      <created>1726488392689</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726488392689</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +346,8 @@
     <MESSAGE value="Implementing FAT16 filesystem driver core functionality" />
     <MESSAGE value="Implementing The FAT16 Resolver Function" />
     <MESSAGE value="Implementing the VFS fopen function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing the VFS fopen function" />
+    <MESSAGE value="Implementing FAT16 fopen function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing FAT16 fopen function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
