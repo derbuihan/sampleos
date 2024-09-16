@@ -9,4 +9,9 @@ bool isdigit(char c);
 int tonumericdigit(char c);
 char *strcpy(char *dest, const char *src);
 
+char tolower(char s1);
+int strnlen_terminator(const char *ptr, int max, char terminator);
+int istrncmp(const char *s1, const char *s2, int n);
+int strncmp(const char *s1, const char *s2, int n);
+
 #endif  // SAMPLEOS_STRING_H

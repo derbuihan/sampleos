@@ -26,6 +26,7 @@ struct filesystem {
 struct file_descriptor {
   // The descriptor index
   int index;
+  struct filesystem* filesystem;
 
   // Private data for internal file descriptor
   void* private;
@@ -35,7 +36,7 @@ struct file_descriptor {
 };
 
 void fs_init();
-int fopen(const char* path, FILE_MODE mode);
+int fopen(const char* filename, const char* mode_str);
 void fs_insert_filesystem(struct filesystem* fs);
 struct filesystem* fs_resolve(struct disk* disk);
 
