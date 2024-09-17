@@ -19,10 +19,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing the FAT16 fseek functionality">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing the fstat VFS functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/file.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +156,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="101738000" />
+      <workItem from="1725696333820" duration="102018000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -342,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726491430738</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implementing the fstat VFS functionality">
+      <option name="closed" value="true" />
+      <created>1726531989167</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726531989167</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +380,8 @@
     <MESSAGE value="Implementing FAT16 fread functionality" />
     <MESSAGE value="Implementing the VFS fseek functionality" />
     <MESSAGE value="Implementing the FAT16 fseek functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing the FAT16 fseek functionality" />
+    <MESSAGE value="Implementing the fstat VFS functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing the fstat VFS functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
