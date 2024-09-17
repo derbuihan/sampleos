@@ -19,11 +19,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing the VFS fclose functionality">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing the FAT16 fclose functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <workItem from="1725690366880" duration="79000" />
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
-      <workItem from="1725696333820" duration="104152000" />
+      <workItem from="1725696333820" duration="104208000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -367,14 +366,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726588082050</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Implementing the FAT16 fclose functionality">
+      <option name="closed" value="true" />
+      <created>1726588559435</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726588559435</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix Makefile" />
     <MESSAGE value="Implemented IDT" />
     <MESSAGE value="Implemented PIC" />
     <MESSAGE value="Implemented kmalloc/kfree" />
@@ -399,7 +405,8 @@
     <MESSAGE value="Implementing the fstat VFS functionality" />
     <MESSAGE value="Implementing the FAT16 fstat function" />
     <MESSAGE value="Implementing the VFS fclose functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing the VFS fclose functionality" />
+    <MESSAGE value="Implementing the FAT16 fclose functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing the FAT16 fclose functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
