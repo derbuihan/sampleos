@@ -87,12 +87,8 @@ void kernel_main() {
 
   int fd = fopen("0:/hello.txt", "r");
   if (fd) {
-    print("We opend hello.txt\n");
-    char buf[15];
-    fseek(fd, 2, SEEK_SET);
-    fread(buf, 12, 1, fd);
-    buf[14] = '\0';
-    print(buf);
+    struct file_stat s;
+    fstat(fd, &s);
   }
 
   while (1) {
