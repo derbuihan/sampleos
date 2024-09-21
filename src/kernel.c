@@ -14,6 +14,7 @@
 #include "memory/memory.h"
 #include "memory/paging/paging.h"
 #include "string/string.h"
+#include "task/tss.h"
 
 uint16_t *video_mem = 0;
 
@@ -65,11 +66,17 @@ void panic(const char *msg) {
   }
 }
 
+struct tss tss;
 struct gdt gdt_real[SAMPLEOS_TOTAL_GDT_SEGMENTS];
 struct gdt_structured gdt_structured[SAMPLEOS_TOTAL_GDT_SEGMENTS] = {
     {.base = 0x00, .limit = 0x00, .type = 0x00},        // NULL Segment
     {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0x9A},  // Code Segment
     {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0x92},  // Data Segment
+    {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0xF8},  // User Code Segment
+    {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0xF2},  // User Data Segment
+    {.base = (uint32_t)&tss,
+     .limit = sizeof(tss),
+     .type = 0xE9},  // TSS Segment
 };
 
 void kernel_main() {
@@ -92,6 +99,14 @@ void kernel_main() {
 
   // Initialize the IDT
   idt_init();
+
+  // Setup the TSS
+  memset(&tss, 0x00, sizeof(tss));
+  tss.esp0 = 0x600000;
+  tss.ss0 = KERNEL_DATA_SELECTOR;
+
+  // Load the TSS
+  tss_load(0x28);
 
   // Setup paging
   kernel_chunk = paging_new_4gb(PAGING_IS_WRITEABLE | PAGING_IS_PRESENT |

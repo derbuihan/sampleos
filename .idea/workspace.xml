@@ -19,7 +19,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing a kernel panic" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Changing our kernel segment and data descriptors to be written in C">
+      <change afterPath="$PROJECT_DIR$/src/task/tss.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,6 +132,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.all">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Docker.all" />
       <item itemvalue="Docker.build" />
@@ -148,6 +158,7 @@
       <workItem from="1725690450130" duration="5120000" />
       <workItem from="1725696268546" duration="6000" />
       <workItem from="1725696333820" duration="112458000" />
+      <workItem from="1726893525212" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -373,14 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726588626979</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changing our kernel segment and data descriptors to be written in C">
+      <option name="closed" value="true" />
+      <created>1726893745435</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1726893745435</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented PIC" />
     <MESSAGE value="Implemented kmalloc/kfree" />
     <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
@@ -405,7 +423,8 @@
     <MESSAGE value="Implementing the VFS fclose functionality" />
     <MESSAGE value="Implementing the FAT16 fclose functionality" />
     <MESSAGE value="Implementing a kernel panic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing a kernel panic" />
+    <MESSAGE value="Changing our kernel segment and data descriptors to be written in C" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing our kernel segment and data descriptors to be written in C" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
