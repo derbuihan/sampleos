@@ -28,4 +28,7 @@ struct process {
   uint32_t size;
 };
 
+int process_load_for_slot(const char* filename, struct process** process,
+                          int process_slot);
+
 #endif  // SAMPLEOS_SRC_TASK_PROCESS_H_
