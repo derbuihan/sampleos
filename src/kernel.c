@@ -13,7 +13,10 @@
 #include "memory/heap/kheap.h"
 #include "memory/memory.h"
 #include "memory/paging/paging.h"
+#include "status.h"
 #include "string/string.h"
+#include "task/process.h"
+#include "task/task.h"
 #include "task/tss.h"
 
 uint16_t *video_mem = 0;
@@ -118,17 +121,16 @@ void kernel_main() {
   // Enable paging
   enable_paging();
 
-  // Enable interrupts
-  enable_interrupts();
-
-  int fd = fopen("0:/hello.txt", "r");
-  if (fd) {
-    struct file_stat s;
-    fstat(fd, &s);
-    fclose(fd);
-
-    print("testing\n");
+  struct process *process = 0;
+  int res = process_load("0:/blank.bin", &process);
+  if (res != SAMPLEOS_ALL_OK) {
+    panic("Failed to load blank.bin\n");
   }
+  print("1");
+
+  task_run_first_ever_task();
+
+  print("2");
 
   while (1) {
   }

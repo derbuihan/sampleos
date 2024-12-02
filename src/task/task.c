@@ -34,6 +34,7 @@ struct task* task_new(struct process* process) {
   if (task_head == 0) {
     task_head = task;
     task_tail = task;
+    current_task = task;
     goto out;
   }
 
@@ -116,6 +117,7 @@ int task_init(struct task* task, struct process* process) {
   }
   task->registers.ip = SAMPLEOS_PROGRAM_VIRTUAL_ADDRESS;
   task->registers.ss = USER_DATA_SEGMENT;
+  task->registers.cs = USER_CODE_SEGMENT;
   task->registers.esp = SAMPLEOS_PROGRAM_VERTUAL_STACK_ADDRESS_START;
 
   task->process = process;

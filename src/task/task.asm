@@ -40,7 +40,7 @@ task_return:
     mov fs, ax
     mov gs, ax
 
-    push dword [ebx + 4]
+    push dword [ebp + 4]
     call restore_general_purpose_registers
     add esp, 4
 
@@ -61,7 +61,7 @@ restore_general_purpose_registers:
     mov ecx, [ebx + 20] ; ecx
     mov eax, [ebx + 24] ; eax
 
-    pop esp
+    pop ebp
     ret
 
 ; void user_registers()
