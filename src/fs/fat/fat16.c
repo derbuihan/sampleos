@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 
+#include "../../config.h"
 #include "../../disk/streamer.h"
 #include "../../kernel.h"
 #include "../../memory/heap/kheap.h"

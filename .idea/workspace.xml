@@ -26,13 +26,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Packing the GDT">
-      <change afterPath="$PROJECT_DIR$/programs/blank/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programs/blank/blank.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programs/blank/linker.ld" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Creating our first user process application">
       <change afterPath="$PROJECT_DIR$/src/task/task.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/pparser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/pparser.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
@@ -76,6 +71,8 @@
     <setting file="file://$PROJECT_DIR$/src/task/process.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MakefileLocalSettings">
     <option name="toolchainName" value="Docker" />
@@ -188,7 +185,7 @@
       <workItem from="1730600513799" duration="8000" />
       <workItem from="1733032855132" duration="158000" />
       <workItem from="1733033022107" duration="3273000" />
-      <workItem from="1733037964681" duration="10724000" />
+      <workItem from="1733037964681" duration="11138000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -462,14 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733038796953</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Creating our first user process application">
+      <option name="closed" value="true" />
+      <created>1733145492489</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733145492489</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improving our disk driver" />
     <MESSAGE value="add README.md" />
     <MESSAGE value="Making a path parser" />
     <MESSAGE value="Implemented a disk streamer" />
@@ -494,7 +498,8 @@
     <MESSAGE value="Implementing Process Foundations Part 1" />
     <MESSAGE value="Implementing Process Foundations Part 2" />
     <MESSAGE value="Packing the GDT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packing the GDT" />
+    <MESSAGE value="Creating our first user process application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating our first user process application" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
