@@ -26,9 +26,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing Process Foundations Part 2">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Packing the GDT">
+      <change afterPath="$PROJECT_DIR$/programs/blank/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programs/blank/blank.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programs/blank/linker.ld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/task.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gdt/gdt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/gdt/gdt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/pparser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/pparser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +68,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/config.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/gdt/gdt.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/kernel.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/memory/paging/paging.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/string/string.c" root0="FORCE_HIGHLIGHTING" />
@@ -179,7 +188,7 @@
       <workItem from="1730600513799" duration="8000" />
       <workItem from="1733032855132" duration="158000" />
       <workItem from="1733033022107" duration="3273000" />
-      <workItem from="1733037964681" duration="817000" />
+      <workItem from="1733037964681" duration="10724000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -445,14 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733038738811</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Packing the GDT">
+      <option name="closed" value="true" />
+      <created>1733038796953</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733038796953</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented ability to change the page tables" />
     <MESSAGE value="Improving our disk driver" />
     <MESSAGE value="add README.md" />
     <MESSAGE value="Making a path parser" />
@@ -477,7 +493,8 @@
     <MESSAGE value="Implementing Task Foundations" />
     <MESSAGE value="Implementing Process Foundations Part 1" />
     <MESSAGE value="Implementing Process Foundations Part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Process Foundations Part 2" />
+    <MESSAGE value="Packing the GDT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Packing the GDT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
