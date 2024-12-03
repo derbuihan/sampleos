@@ -116,7 +116,7 @@ void kernel_main() {
                                 PAGING_ACCESS_FROM_ALL);
 
   // Switch to kernel paging chunk
-  paging_switch(paging_4gb_chunk_get_directory(kernel_chunk));
+  paging_switch(kernel_chunk);
 
   // Enable paging
   enable_paging();
