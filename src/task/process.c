@@ -110,7 +110,6 @@ int process_load_for_slot(const char* filename, struct process** process,
 
   if (process_get(process_slot) != 0) {
     return -EISTKN;
-    goto out;
   }
 
   _process = kzalloc(sizeof(struct process));

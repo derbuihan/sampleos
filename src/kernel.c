@@ -72,7 +72,7 @@ void panic(const char *msg) {
 struct tss tss;
 struct gdt gdt_real[SAMPLEOS_TOTAL_GDT_SEGMENTS];
 struct gdt_structured gdt_structured[SAMPLEOS_TOTAL_GDT_SEGMENTS] = {
-    {.base = 0x00, .limit = 0x00, .type = 0x00},        // NULL Segment
+    {.base = 0x00, .limit = 0x00000000, .type = 0x00},  // NULL Segment
     {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0x9A},  // Code Segment
     {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0x92},  // Data Segment
     {.base = 0x00, .limit = 0xFFFFFFFF, .type = 0xF8},  // User Code Segment
