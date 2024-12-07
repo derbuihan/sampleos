@@ -1,5 +1,6 @@
 #include "kernel.h"
 
+#include <config.h>
 #include <stddef.h>
 #include <stdint.h>
 
@@ -10,9 +11,12 @@
 #include "io/io.h"
 #include "memory/heap/kheap.h"
 #include "memory/paging/paging.h"
+#include "memory/memory.h"
 #include "string/string.h"
+#include "gdt/gdt.h"
 
-uint16_t *video_mem = 0;
+
+uint16_t* video_mem = 0;
 
 uint16_t terminal_make_char(char c, char color) { return c | (color << 8); }
 
@@ -39,7 +43,7 @@ void terminal_writechar(char c, char color) {
 }
 
 void terminal_initialize() {
-  video_mem = (uint16_t *)0xb8000;
+  video_mem = (uint16_t*)0xb8000;
   for (int y = 0; y < VGA_HEIGHT; y++) {
     for (int x = 0; x < VGA_WIDTH; x++) {
       terminal_putchar(x, y, ' ', 0);
@@ -47,24 +51,39 @@ void terminal_initialize() {
   }
 }
 
-void print(const char *str) {
+void print(const char* str) {
   size_t len = strlen(str);
   for (size_t i = 0; i < len; i++) {
     terminal_writechar(str[i], 0xf);
   }
 }
 
-static struct paging_4gb_chunk *kernel_chunk = 0;
+static struct paging_4gb_chunk* kernel_chunk = 0;
 
-void panic(const char *msg) {
+void panic(const char* msg) {
   print(msg);
   while (1) {
   }
 }
 
+//struct tss tss;
+struct gdt gdt_real[SAMPLEOS_TOTAL_GDT_SEGMENTS];
+struct gdt_structured gdt_structured[SAMPLEOS_TOTAL_GDT_SEGMENTS] = {
+    {.base = 0x00000000, .limit = 0x00, .type = 0x00}, // NULL
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x9a},
+    // Kernel code segment
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x92}
+    // Kernel data segment
+};
+
 void kernel_main() {
   terminal_initialize();
   print("Hello, SampleOS!\n");
+
+  // Initialize the GDT
+  memset(&gdt_real, 0, sizeof(gdt_real));
+  gdt_structured_to_gdt(gdt_real, gdt_structured, SAMPLEOS_TOTAL_GDT_SEGMENTS);
+  gdt_load(gdt_real, sizeof(gdt_real));
 
   // Initialize the heap
   kheap_init();
