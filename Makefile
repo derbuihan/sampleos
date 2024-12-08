@@ -21,7 +21,7 @@ LD := i686-elf-ld
 
 all: $(BIN_DIR)/os.bin
 
-$(BIN_DIR)/os.bin: $(BIN_DIR)/boot.bin $(BIN_DIR)/kernel.bin ./hello.txt
+$(BIN_DIR)/os.bin: $(BIN_DIR)/boot.bin $(BIN_DIR)/kernel.bin ./hello.txt user_pragrams
 	@mkdir -p $(@D)
 	rm -rf $(BIN_DIR)/os.bin
 	dd if=$(BIN_DIR)/boot.bin >> $(BIN_DIR)/os.bin
@@ -53,7 +53,13 @@ $(BUILD_DIR)/%.asm.o: $(SRC_DIR)/%.asm
 	@mkdir -p $(@D)
 	$(AS) -f elf -g $< -o $@
 
-clean:
+user_pragrams:
+	cd ./programs/blank && $(MAKE) all
+
+user_programs_clean:
+	cd ./programs/blank && $(MAKE) clean
+
+clean: user_programs_clean
 	rm -f ./bin/boot.bin
 	rm -f ./bin/kernel.bin
 	rm -f ./bin/os.bin
