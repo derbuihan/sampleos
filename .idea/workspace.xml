@@ -27,17 +27,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing The TSS">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing Task Foundations">
+      <change afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/process.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/pparser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/pparser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/status.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/status.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/string.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/string.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/string.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +68,17 @@
     &quot;accountId&quot;: &quot;c7b18aee-17de-48af-a428-89f3181f3cd9&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/config.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/status.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/string/string.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/string/string.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MakefileLocalSettings">
     <option name="toolchainName" value="Docker" />
     <option name="availableProjects">
@@ -173,7 +184,7 @@
       <workItem from="1733467743825" duration="13707000" />
       <workItem from="1733546766525" duration="5515000" />
       <workItem from="1733574353457" duration="24000" />
-      <workItem from="1733574384935" duration="4482000" />
+      <workItem from="1733574384935" duration="15306000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -399,14 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733542825117</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Implementing Task Foundations">
+      <option name="closed" value="true" />
+      <created>1733647943020</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733647943020</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented PIC" />
     <MESSAGE value="Implemented kmalloc/kfree" />
     <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
@@ -431,7 +449,8 @@
     <MESSAGE value="Implementing the VFS fclose functionality" />
     <MESSAGE value="Implementing the FAT16 fclose functionality" />
     <MESSAGE value="Chaning kernel segment and data descriptors to be written in C" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chaning kernel segment and data descriptors to be written in C" />
+    <MESSAGE value="Implementing Task Foundations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing Task Foundations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

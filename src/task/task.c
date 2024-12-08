@@ -10,9 +10,9 @@
 // The current task that is running
 struct task* current_task = 0;
 
-int task_init(struct task* task);
+int task_init(struct task* task, struct process* process);
 
-struct task* task_new() {
+struct task* task_new(struct process* process) {
   int res = 0;
 
   struct task* task = kzalloc(sizeof(struct task));
@@ -21,7 +21,7 @@ struct task* task_new() {
     goto out;
   }
 
-  res = task_init(task);
+  res = task_init(task, process);
   if (res != SAMPLEOS_ALL_OK) {
     goto out;
   }
@@ -34,13 +34,15 @@ out:
   return task;
 }
 
+struct task* task_current() { return current_task; }
+
 int task_free(struct task* task) {
   paging_free_4gb(task->page_directory);
   kfree(task);
   return 0;
 }
 
-int task_init(struct task* task) {
+int task_init(struct task* task, struct process* process) {
   memset(task, 0, sizeof(struct task));
 
   task->page_directory =
@@ -54,6 +56,8 @@ int task_init(struct task* task) {
   task->registers.esp = SAMPLEOS_PROGRAM_VIRTUAL_STACK_ADDRESS_START;
   task->registers.ss = USER_DATA_SEGMENT;
   task->registers.cs = USER_CODE_SEGMENT;
+
+  task->process = process;
 
   return 0;
 }

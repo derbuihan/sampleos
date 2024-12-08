@@ -21,11 +21,15 @@ struct registers {
   uint32_t ss;
 };
 
+struct process;
 struct task {
   struct paging_4gb_chunk* page_directory;
   struct registers registers;
+  struct process* process;
 };
 
+struct task* task_new(struct process* process);
+struct task* task_current();
 int task_free(struct task* task);
 
 #endif  // TASK_H
