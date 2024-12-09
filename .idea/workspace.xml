@@ -28,10 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing Task Foundations">
-      <change afterPath="$PROJECT_DIR$/programs/blank/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/programs/blank/blank.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

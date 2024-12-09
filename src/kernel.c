@@ -7,15 +7,17 @@
 #include "disk/disk.h"
 #include "disk/streamer.h"
 #include "fs/pparser.h"
+#include "gdt/gdt.h"
 #include "idt/idt.h"
 #include "io/io.h"
 #include "memory/heap/kheap.h"
-#include "memory/paging/paging.h"
 #include "memory/memory.h"
+#include "memory/paging/paging.h"
+#include "status.h"
 #include "string/string.h"
-#include "gdt/gdt.h"
+#include "task/process.h"
+#include "task/task.h"
 #include "task/tss.h"
-
 
 uint16_t* video_mem = 0;
 
@@ -70,12 +72,12 @@ void panic(const char* msg) {
 struct tss tss;
 struct gdt gdt_real[SAMPLEOS_TOTAL_GDT_SEGMENTS];
 struct gdt_structured gdt_structured[SAMPLEOS_TOTAL_GDT_SEGMENTS] = {
-    {.base = 0x00000000, .limit = 0x00, .type = 0x00}, // NULL
-    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x9a}, // Kernel code
-    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x92}, // Kernel data
-    {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF8}, // User code
-    {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF2}, // User data
-    {.base = (uint32_t)&tss, .limit = sizeof(struct tss), .type = 0x89}, // TSS
+    {.base = 0x00000000, .limit = 0x00, .type = 0x00},        // NULL
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x9a},  // Kernel code
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0x92},  // Kernel data
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF8},  // User code
+    {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF2},  // User data
+    {.base = (uint32_t)&tss, .limit = sizeof(struct tss), .type = 0x89},  // TSS
 };
 
 void kernel_main() {
@@ -84,8 +86,7 @@ void kernel_main() {
 
   // Initialize the GDT
   memset(&gdt_real, 0, sizeof(gdt_real));
-  gdt_structured_to_gdt(gdt_real, gdt_structured,
-                        SAMPLEOS_TOTAL_GDT_SEGMENTS);
+  gdt_structured_to_gdt(gdt_real, gdt_structured, SAMPLEOS_TOTAL_GDT_SEGMENTS);
   gdt_load(gdt_real, sizeof(gdt_real));
 
   // Initialize the heap
@@ -105,7 +106,7 @@ void kernel_main() {
   tss.ss0 = KERNEL_DATA_SELECTOR;
 
   // Load the TSS
-  tss_load(0x28); // (0x28 >> 3) = 0x5 = 5th GDT entry
+  tss_load(0x28);  // (0x28 >> 3) = 0x5 = 5th GDT entry
 
   // Setup paging
   kernel_chunk = paging_new_4gb(PAGING_IS_WRITEABLE | PAGING_IS_PRESENT |
@@ -118,15 +119,22 @@ void kernel_main() {
   enable_paging();
 
   // Enable interrupts
-  enable_interrupts();
+  // enable_interrupts();
 
+  // Test the filesystem
   int fd = fopen("0:/hello.txt", "r");
   if (fd) {
     struct file_stat s;
     fstat(fd, &s);
     fclose(fd);
-
     print("testing\n");
+  }
+
+  // Load a process
+  struct process* process = 0;
+  int res = process_load("0:/blank.bin", &process);
+  if (res != SAMPLEOS_ALL_OK) {
+    panic("Failed to load process");
   }
 
   while (1) {
