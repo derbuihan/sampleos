@@ -27,10 +27,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Implementing Task Foundations">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Load the process">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +61,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/config.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/kernel.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/memory/paging/paging.h" root0="SKIP_HIGHLIGHTING" />
@@ -420,14 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733662461415</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Load the process">
+      <option name="closed" value="true" />
+      <created>1733739984155</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733739984155</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented kmalloc/kfree" />
     <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
     <MESSAGE value="implemented paging" />
@@ -452,7 +458,8 @@
     <MESSAGE value="Implementing the FAT16 fclose functionality" />
     <MESSAGE value="Chaning kernel segment and data descriptors to be written in C" />
     <MESSAGE value="Implementing Task Foundations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Task Foundations" />
+    <MESSAGE value="Load the process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load the process" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

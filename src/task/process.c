@@ -105,9 +105,11 @@ int process_load_for_slot(const char* filename, struct process** process,
   *process = _process;
 out:
   if (ISERR(res)) {
-    if (_process && _process->ptr) {
-      kfree(_process->ptr);
+    if (_process && _process->task) {
+      kfree(_process->task);
     }
+
+    // Free the process data
   }
   return res;
 }
