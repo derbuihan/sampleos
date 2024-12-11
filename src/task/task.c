@@ -53,11 +53,8 @@ void task_run_first_ever_task() {
     panic("task_run_first_ever_task(): No current task exists!\n");
   }
 
-  print("Panic0");
   task_switch(current_task);
-  print("Panic1");
   task_return(&current_task->registers);
-  panic("Panic2");
 }
 
 int task_init(struct task* task, struct process* process) {

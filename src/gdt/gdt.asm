@@ -7,7 +7,7 @@ global gdt_load
 gdt_load:
     mov eax, [esp + 4] ; gdt
     mov [gdt_descriptor + 2], eax ; GDT Start Address
-    mov ax, [eax + 8] ; size
+    mov ax, [esp + 8] ; size
     mov [gdt_descriptor], ax ; Size
     lgdt [gdt_descriptor]
     ret

@@ -139,7 +139,6 @@ void kernel_main() {
 
   print("Loaded process\n");
   task_run_first_ever_task();
-  print("End of kernel_main\n");
 
   while (1) {
   }
