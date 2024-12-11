@@ -27,9 +27,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Load the process">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/src/task/task.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/blank/blank.asm" beforeDir="false" afterPath="$PROJECT_DIR$/programs/blank/blank.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,10 @@
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/status.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/string/string.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/string/string.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/process.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MakefileLocalSettings">
@@ -427,14 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733739984155</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix">
+      <option name="closed" value="true" />
+      <created>1733808418333</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733808418333</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creating enable interrupts functionality" />
     <MESSAGE value="implemented kzalloc" />
     <MESSAGE value="implemented paging" />
     <MESSAGE value="Implemented ability to change the page tables" />
@@ -459,7 +474,8 @@
     <MESSAGE value="Chaning kernel segment and data descriptors to be written in C" />
     <MESSAGE value="Implementing Task Foundations" />
     <MESSAGE value="Load the process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load the process" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

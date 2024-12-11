@@ -32,4 +32,9 @@ struct task* task_new(struct process* process);
 struct task* task_current();
 int task_free(struct task* task);
 
+void task_return(struct registers* registers);
+void restore_general_purpose_registers(struct registers* registers);
+void user_registers();
+void task_run_first_ever_task();
+
 #endif  // TASK_H

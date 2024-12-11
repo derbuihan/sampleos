@@ -77,7 +77,7 @@ struct gdt_structured gdt_structured[SAMPLEOS_TOTAL_GDT_SEGMENTS] = {
     {.base = 0x00000000, .limit = 0xffffffff, .type = 0x92},  // Kernel data
     {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF8},  // User code
     {.base = 0x00000000, .limit = 0xffffffff, .type = 0xF2},  // User data
-    {.base = (uint32_t)&tss, .limit = sizeof(struct tss), .type = 0x89},  // TSS
+    {.base = (uint32_t)&tss, .limit = sizeof(tss), .type = 0xE9},  // TSS
 };
 
 void kernel_main() {
@@ -101,7 +101,7 @@ void kernel_main() {
   // Initialize the IDT
   idt_init();
 
-  memset(&tss, 0, sizeof(struct tss));
+  memset(&tss, 0, sizeof(tss));
   tss.esp0 = 0x600000;
   tss.ss0 = KERNEL_DATA_SELECTOR;
 
@@ -136,6 +136,10 @@ void kernel_main() {
   if (res != SAMPLEOS_ALL_OK) {
     panic("Failed to load process");
   }
+
+  print("Loaded process\n");
+  task_run_first_ever_task();
+  print("End of kernel_main\n");
 
   while (1) {
   }

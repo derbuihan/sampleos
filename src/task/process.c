@@ -13,6 +13,8 @@ static void process_init(struct process* process) {
   memset(process, 0, sizeof(struct process));
 }
 
+struct process* process_current() { return current_process; }
+
 static int process_load_binary(const char* filename, struct process* process) {
   int res = 0;
   int fd = fopen(filename, "r");
@@ -103,6 +105,7 @@ int process_load_for_slot(const char* filename, struct process** process,
   res = process_map_memory(_process);
   if (res < 0) goto out;
   *process = _process;
+
 out:
   if (ISERR(res)) {
     if (_process && _process->task) {
