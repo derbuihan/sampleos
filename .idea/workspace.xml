@@ -9,6 +9,7 @@
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -28,27 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Creating the interrupt 0x80 for user process to kernel communication">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Creating the ability to create and execute kernel commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/disk/disk.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/disk/disk.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/disk/streamer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/streamer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fs/pparser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/pparser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gdt/gdt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/gdt/gdt.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/idt/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/idt/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/heap/heap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/heap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/heap/kheap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/kheap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/process.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,13 +71,8 @@
     <setting file="file://$PROJECT_DIR$/src/config.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/fs/file.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.c" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/idt/idt.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/kernel.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/kernel.c" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/kernel.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/kernel.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/memory/paging/paging.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/memory/paging/paging.h" root0="FORCE_HIGHLIGHTING" />
@@ -102,8 +81,6 @@
     <setting file="file://$PROJECT_DIR$/src/task/process.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/process.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.c" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.c" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MakefileLocalSettings">
@@ -186,12 +163,7 @@
       <recent name="$PROJECT_DIR$/src/memory" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.run">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Docker.all">
     <configuration name="user_pragrams" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sampleos" TARGET_NAME="user_pragrams" CONFIG_NAME="user_pragrams" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -211,14 +183,31 @@
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Docker.all" />
       <item itemvalue="Docker.build" />
+      <item itemvalue="Makefile のターゲット.all" />
       <item itemvalue="Shell Script.run" />
       <item itemvalue="ネイティブアプリケーション.user_pragrams" />
       <item itemvalue="ネイティブアプリケーション.user_programs_clean" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile のターゲット.all" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -241,7 +230,8 @@
       <workItem from="1733033022107" duration="3273000" />
       <workItem from="1733037964681" duration="25700000" />
       <workItem from="1733467238676" duration="6000" />
-      <workItem from="1734001688775" duration="2209000" />
+      <workItem from="1734001688775" duration="3278000" />
+      <workItem from="1734005078003" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -555,14 +545,21 @@
       <option name="project" value="LOCAL" />
       <updated>1734002698723</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Creating the ability to create and execute kernel commands">
+      <option name="closed" value="true" />
+      <created>1734003932106</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1734003932106</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update README.md" />
     <MESSAGE value="Started implementing virtual filesystem functiojnality" />
     <MESSAGE value="Implementing FAT16 filesystem driver core functionality" />
     <MESSAGE value="Implementing The FAT16 Resolver Function" />
@@ -587,7 +584,8 @@
     <MESSAGE value="Executing the process and dropping into user land privileges" />
     <MESSAGE value="Changing the paging functionality" />
     <MESSAGE value="Creating the interrupt 0x80 for user process to kernel communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the interrupt 0x80 for user process to kernel communication" />
+    <MESSAGE value="Creating the ability to create and execute kernel commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the ability to create and execute kernel commands" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
