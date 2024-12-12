@@ -2,13 +2,13 @@
 
 #include <stdint.h>
 
-#include "../../config.h"
-#include "../../disk/streamer.h"
-#include "../../kernel.h"
-#include "../../memory/heap/kheap.h"
-#include "../../memory/memory.h"
-#include "../../status.h"
-#include "../../string/string.h"
+#include "config.h"
+#include "disk/streamer.h"
+#include "kernel.h"
+#include "memory/heap/kheap.h"
+#include "memory/memory.h"
+#include "status.h"
+#include "string/string.h"
 
 #define SAMPLEOS_FAT16_SIGNATURE 0x29
 #define SAMPLEOS_FAT16_FAT_ENTRY_SIZE 0x02

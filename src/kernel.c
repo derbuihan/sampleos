@@ -70,7 +70,7 @@ void panic(const char *msg) {
 }
 
 void kernel_page() {
-  kernel_registers();
+  // kernel_registers();
   paging_switch(kernel_chunk);
 }
 

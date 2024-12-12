@@ -1,8 +1,8 @@
 #include "paging.h"
 
-#include "../../status.h"
-#include "../heap/kheap.h"
-#include "../memory.h"
+#include "memory//heap/kheap.h"
+#include "memory/memory.h"
+#include "status.h"
 
 extern void paging_load_directory(uint32_t* directory);
 

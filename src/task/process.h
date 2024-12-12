@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 
-#include "../config.h"
-#include "../task/task.h"
+#include "config.h"
+#include "task/task.h"
 
 struct process {
   // The process id

@@ -1,7 +1,7 @@
 #ifndef SAMPLEOS_DISK_H
 #define SAMPLEOS_DISK_H
 
-#include "../fs/file.h"
+#include "fs/file.h"
 
 typedef unsigned int SAMPLEOS_DISK_TYPE;
 

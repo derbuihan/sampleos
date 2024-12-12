@@ -1,13 +1,13 @@
 #include "file.h"
 
-#include "../config.h"
-#include "../disk/disk.h"
-#include "../kernel.h"
-#include "../memory/heap/kheap.h"
-#include "../memory/memory.h"
-#include "../status.h"
-#include "../string/string.h"
+#include "config.h"
+#include "disk/disk.h"
 #include "fat/fat16.h"
+#include "kernel.h"
+#include "memory/heap/kheap.h"
+#include "memory/memory.h"
+#include "status.h"
+#include "string/string.h"
 
 struct filesystem* filesystems[SAMPLEOS_MAX_FILESYSTEMS];
 struct file_descriptor* file_descriptors[SAMPLEOS_MAX_FILE_DESCRIPTORS];

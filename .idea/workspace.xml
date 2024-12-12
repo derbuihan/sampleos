@@ -28,14 +28,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="fix">
+    <list default="true" id="c1b5200c-b01f-454d-9da5-0ca12e5b62bb" name="Changes" comment="Creating the interrupt 0x80 for user process to kernel communication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/idt/idt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/disk.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/disk.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/disk.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/disk/streamer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/disk/streamer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/fat/fat16.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/fat/fat16.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/pparser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/pparser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gdt/gdt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/gdt/gdt.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/idt/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/idt/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/idt/idt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/heap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/heap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/heap/kheap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/heap/kheap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memory/paging/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memory/paging/paging.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/process.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/process.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/task.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/task.h" afterDir="false" />
     </list>
@@ -76,9 +87,13 @@
     <setting file="file://$PROJECT_DIR$/src/config.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/fs/file.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/idt/idt.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/idt/idt.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/kernel.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/kernel.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/kernel.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/kernel.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/memory/paging/paging.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/memory/paging/paging.h" root0="FORCE_HIGHLIGHTING" />
@@ -87,6 +102,8 @@
     <setting file="file://$PROJECT_DIR$/src/task/process.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/process.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/derbuihan/Programs/C/sampleos/src/task/task.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/task/task.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MakefileLocalSettings">
@@ -224,7 +241,7 @@
       <workItem from="1733033022107" duration="3273000" />
       <workItem from="1733037964681" duration="25700000" />
       <workItem from="1733467238676" duration="6000" />
-      <workItem from="1734001688775" duration="868000" />
+      <workItem from="1734001688775" duration="2209000" />
     </task>
     <task id="LOCAL-00001" summary="print function">
       <option name="closed" value="true" />
@@ -530,14 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733223561432</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Creating the interrupt 0x80 for user process to kernel communication">
+      <option name="closed" value="true" />
+      <created>1734002698723</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1734002698723</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented fat16 filesystem" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="Started implementing virtual filesystem functiojnality" />
     <MESSAGE value="Implementing FAT16 filesystem driver core functionality" />
@@ -562,7 +586,8 @@
     <MESSAGE value="Implementing User Land Functionality" />
     <MESSAGE value="Executing the process and dropping into user land privileges" />
     <MESSAGE value="Changing the paging functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing the paging functionality" />
+    <MESSAGE value="Creating the interrupt 0x80 for user process to kernel communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the interrupt 0x80 for user process to kernel communication" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

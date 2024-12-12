@@ -2,9 +2,9 @@
 
 #include <stdbool.h>
 
-#include "../../config.h"
-#include "../../status.h"
-#include "../memory.h"
+#include "config.h"
+#include "memory/memory.h"
+#include "status.h"
 
 static int heap_validate_table(void* ptr, void* end, struct heap_table* table) {
   int res = 0;

@@ -1,12 +1,12 @@
 #include "task.h"
 
-#include "../idt/idt.h"
-#include "../kernel.h"
-#include "../memory/heap/kheap.h"
-#include "../memory/memory.h"
-#include "../memory/paging/paging.h"
-#include "../status.h"
+#include "idt/idt.h"
+#include "kernel.h"
+#include "memory/heap/kheap.h"
+#include "memory/memory.h"
+#include "memory/paging/paging.h"
 #include "process.h"
+#include "status.h"
 
 // The current task that is running
 struct task* current_task = 0;

@@ -1,8 +1,8 @@
 #ifndef SAMPLEOS_SRC_TASK_TASK_H_
 #define SAMPLEOS_SRC_TASK_TASK_H_
 
-#include "../config.h"
-#include "../memory//paging/paging.h"
+#include "config.h"
+#include "memory//paging/paging.h"
 
 struct interrupt_frame;
 struct registers {

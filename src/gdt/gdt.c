@@ -1,6 +1,6 @@
 #include "gdt.h"
 
-#include "../kernel.h"
+#include "kernel.h"
 
 void encodeGdtEntry(uint8_t* target, struct gdt_structured source) {
   if (source.limit > 65536 && (source.limit & 0xFFF) != 0xFFF) {

@@ -1,13 +1,13 @@
 #include "process.h"
 
-#include "../config.h"
-#include "../fs/file.h"
-#include "../kernel.h"
-#include "../memory/heap/kheap.h"
-#include "../memory/memory.h"
-#include "../memory/paging/paging.h"
-#include "../status.h"
-#include "../string/string.h"
+#include "config.h"
+#include "fs/file.h"
+#include "kernel.h"
+#include "memory/heap/kheap.h"
+#include "memory/memory.h"
+#include "memory/paging/paging.h"
+#include "status.h"
+#include "string/string.h"
 #include "task.h"
 
 // The current process that is running

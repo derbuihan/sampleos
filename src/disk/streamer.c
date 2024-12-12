@@ -1,7 +1,7 @@
 #include "streamer.h"
 
-#include "../config.h"
-#include "../memory/heap/kheap.h"
+#include "config.h"
+#include "memory/heap/kheap.h"
 
 struct disk_stream* diskstreamer_new(int disk_id) {
   struct disk* disk = disk_get(disk_id);

@@ -1,7 +1,7 @@
 #ifndef SAMPLEOS_FAT16_H
 #define SAMPLEOS_FAT16_H
 
-#include "../file.h"
+#include "fs/file.h"
 
 struct filesystem* fat16_init();
 

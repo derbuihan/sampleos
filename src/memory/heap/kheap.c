@@ -1,9 +1,9 @@
 #include "kheap.h"
 
-#include "../../config.h"
-#include "../../kernel.h"
-#include "../memory.h"
+#include "config.h"
 #include "heap.h"
+#include "kernel.h"
+#include "memory/memory.h"
 
 struct heap kernel_heap;
 struct heap_table kernel_heap_table;
